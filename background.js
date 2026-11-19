@@ -1,4 +1,4 @@
-// 내 문장 모음 — 백그라운드 서비스 워커
+// I-collection — 백그라운드 서비스 워커
 // 우클릭 메뉴를 만들고, 메뉴를 누르면 선택한 문장을 chrome.storage.local에 저장한다.
 // 저장 결과는 웹페이지 위 토스트 메시지 + 툴바 아이콘 배지로 알려 준다.
 
@@ -13,7 +13,7 @@ chrome.runtime.onInstalled.addListener(() => {
   chrome.contextMenus.removeAll(() => {
     chrome.contextMenus.create({
       id: MENU_ID,
-      title: '내 문장 모음에 저장',
+      title: 'I-collection에 저장',
       contexts: ['selection']
     });
   });
@@ -96,7 +96,7 @@ function renderToast(kind, message) {
   host.style.cssText = 'all: initial; position: fixed; left: 0; right: 0; bottom: 33vh; display: flex; justify-content: center; z-index: 2147483647; pointer-events: none;';
   const root = host.attachShadow({ mode: 'closed' });
 
-  const iconColor = kind === 'warn' ? '#F2B279' : '#7FD1B9';
+  const iconColor = kind === 'warn' ? '#F2B279' : '#8FB4FF';
   const iconPath = kind === 'warn'
     ? '<path d="M12 8v5"/><path d="M12 16.5v.01"/>'
     : '<path d="M8 12l3 3 5-6"/>';

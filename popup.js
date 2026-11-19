@@ -1,4 +1,4 @@
-// 내 문장 모음 — 팝업 화면
+// I-collection — 팝업 화면
 // 저장한 문장을 보여 주고, 검색·복사·메모·삭제를 처리한다.
 
 const STORAGE_KEY = 'sentences';
@@ -146,7 +146,7 @@ function renderCard(item) {
     memo.title = '눌러서 메모 수정';
     const span = document.createElement('span');
     span.textContent = item.memo;
-    memo.append(icon('pencil', 13, '#12705C'), span);
+    memo.append(icon('pencil', 13, '#2156D9'), span);
     memo.addEventListener('click', () => startMemo(item));
     card.append(memo);
   }

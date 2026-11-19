@@ -1,14 +1,14 @@
 {
   "manifest_version": 3,
-  "name": "내 문장 모음",
+  "name": "I-collection",
   "version": "1.0.0",
-  "description": "웹페이지에서 마음에 드는 문장을 우클릭으로 저장하고, 메모와 함께 모아 보세요.",
+  "description": "웹에서 만난 좋은 문장을 우클릭 한 번으로 저장하세요. 메모를 붙여 나만의 아이디어·영감 노트로 모아 둘 수 있어요.",
   "permissions": ["contextMenus", "storage", "scripting", "activeTab"],
   "background": {
     "service_worker": "background.js"
   },
   "action": {
-    "default_title": "내 문장 모음",
+    "default_title": "I-collection",
     "default_popup": "popup.html"
   }
 }
